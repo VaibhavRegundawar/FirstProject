@@ -1,0 +1,100 @@
+Online Application Title: Appoinment System
+
+Team:			  Vaibhav Regundawar
+                          Faisal Tamboli
+
+Saloon Appoinment Point Of View >>>>>>>
+
+List Of Actors::
+          	1)EndUser
+		2)Customer     -------(Registered User)
+		3)Vendor       -------(Shop Owner)
+ 		4)Admin
+		5)Employee      -------(Employees Working in specific Shop)
+
+
+Functionalities::
+		
+		EndUsers::-> 	
+                                1)Registration
+				2)Can Browse Through our Website
+				3)For Booking Any Appoinment they Must Have to registered First
+		
+            	Customers::->
+				1)Login
+				2)Book an Appoinment
+				3)Cancle the Appoinment
+				4)Should see List of Appoinments for that particular date
+				5)Should see his Booking Details After Appoinment Booked
+				6)Payment
+				7)He/She Can give Feedback
+
+
+	      Vendors(Shop Owner)::->
+				1)Login
+				2)Should See the Booked Appoinments For that particular date
+				3)Should see the payment status of particular customer
+
+
+	     Admin(Website Admin)::->
+			        1)Login
+				2)Add new Organizations(Shops)
+				3)Should see the feedback for specific shop
+				4)Should see Customer Details who registerd for his/her Website
+
+List Of Tables::
+
+    		1)Shops::
+                        1.ShopId
+			2.ShpName
+			3.City
+			4.Starting Time
+			5.End Time
+
+		2)Customers::
+			1.CustId
+			2.CustName
+			3.Email
+			4.Password
+			5.Mobile No.
+		
+		3)CardDetails::
+			1.CustId
+			2.CardNo
+			3.ExpiryDate
+			4.CVV
+
+		4)Employees::
+			1.EmpId
+			2.EmpName
+			3.ShopId     ----(Foreign Key)
+
+		5)Services::
+			1.Serv_id
+			2.Serv_name
+			3.Duration
+			4.Price
+			5.ShopId     ----(Foreign Key)
+
+		6)Appoinments::
+			1.AppId
+			2.AppDate
+			3.StartTime
+			4.EndTime
+			5.TotalPrice
+			6.TotalTime
+			7.ShopId     ------}
+			8.EmpId      ------}  Composite Key
+			9.CustId     ------}
+
+		7)Scheduleds::
+			1.ShopId    -----}    Composite Key 
+			2.EmpId     -----}
+			3.From        (Start Time)
+			4.To          (End Time)
+			
+
+
+							
+
+     				
